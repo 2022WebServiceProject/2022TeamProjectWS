@@ -3,6 +3,7 @@ package com.mycompany.myapp.board;
 import java.sql.Date;
 import java.sql.Time;
 import java.sql.Timestamp;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class BoardVO {
@@ -14,17 +15,18 @@ public class BoardVO {
     private String category;
     private LocalDateTime regDate;
 
-    private Timestamp date;
+    private LocalDate date;
     private int cnt;
+    private String alarm;
 
     public String getCategory(){
         return category;
     }
-    public Timestamp getDate(){
+    public LocalDate getDate(){
         return date;
     }
 
-    public void setDate(Timestamp date){
+    public void setDate(LocalDate date){
         this.date = date;
     }
     public void setCategory(String category){
@@ -68,5 +70,11 @@ public class BoardVO {
     public void setRegDate(LocalDateTime regDate) {
         this.regDate = regDate;
     }
-
+    
+    public void setAlarm(String alarm){
+        this.alarm = alarm;
+    }
+    public String getAlarm() {
+        return alarm;
+    }
 }
